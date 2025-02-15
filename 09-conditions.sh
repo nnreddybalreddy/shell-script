@@ -2,7 +2,7 @@
 
 NUM=10
 
-if [ NUM -ge 10 ]
+if [ $NUM -ge 10 ]
 then
     echo "Number gr /eq 10"
 
