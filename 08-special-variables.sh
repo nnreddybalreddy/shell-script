@@ -1,10 +1,12 @@
 #!/bin/bash
 
-NUMBER=5
-
-if [ $NUMBER -gt 10 ]
-then
-    echo "greater than 10"
-else 
-    echo "Less than 10"
-fi        
+echo "all: $@"
+echo "no of variables: $#"
+echo "script name:$0"
+echo "PWD:$PWD"
+echo "Home:$HOME"
+echo "User::$USER"
+echo "HOSTname:$HOSTNAME"
+echo "pid:$$"
+sleep 60 &
+echo "PID of last back ground $!" 
