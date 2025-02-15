@@ -14,18 +14,8 @@ dnf install mysqld -y
 
 if [ $? -ne 0 ]
 then 
-    echo "git installation failed"
+    echo "mysqld installation failed"
     exit 1
 else 
-    echo "git Installation success"   
-fi
-
-dnf install git -y 
-
-if [ $? -ne 0 ]
-then 
-    echo "git installation failed"
-    exit 1
-else 
-    echo "git Installation success"
-fi
+    echo "mysql installation pass"
+fi        
