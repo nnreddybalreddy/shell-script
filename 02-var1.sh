@@ -1,5 +1,5 @@
 #!/bin/bash
-movies = ( "RRR" "YYY")
+movies =("RRR" "YYY")
 
 echo "${movies[0]}"
 
