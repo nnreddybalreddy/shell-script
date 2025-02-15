@@ -2,7 +2,7 @@
 
 NUM=10
 
-if [ NUM >= 10 ]:
+if [ NUM >= 10 ];
     echo "Number gr /eq 10"
 
 else
