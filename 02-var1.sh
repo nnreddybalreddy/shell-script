@@ -1,6 +1,6 @@
 #!/bin/bash
 
-NUM1=10
+NUM1=$1
 
 if [ $NUM1 -ge 10 ]
 then
