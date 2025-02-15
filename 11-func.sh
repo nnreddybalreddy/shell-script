@@ -1,5 +1,12 @@
 #!/bin/bash
 
+VALIDATE(){
+    echo "Exit status:$1"
+    echo "How"
+
+}
+
+
 USERID=$(id -u)
 
 if [ $USERID -ne 0 ]
@@ -13,20 +20,11 @@ fi
 
 dnf install mysqld -y 
 
-if [ $? -ne 0 ]
-then 
-    echo "mysqld installation failed"
-    exit 1
-else 
-    echo "mysql installation pass"
-fi
+
+
+VALIDATE $? "Installing MYSQL"
 
 dnf install git -y 
 
-if [ $? -ne 0 ]
-then 
-    echo "git installation failed"
-    exit 1
-else 
-    echo "git installation pass"
-fi
+VALIDATE $? "Installing GIT"
+
