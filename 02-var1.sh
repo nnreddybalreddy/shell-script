@@ -1,6 +1,6 @@
 #!/bin/bash
-movies=("RRR" "YYY", "RAGHHU")
+movies=("RRR" "YYY" "RAGHHU")
 
 echo "${movies[0]}"
-echo "${movies[$@]}"
+echo "all: ${movies[$@]}"
 
