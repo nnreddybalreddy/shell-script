@@ -17,8 +17,7 @@ then
     echo "git installation failed"
     exit 1
 else 
-    echo "git Installation success"    
-
+    echo "git Installation success"   
 fi
 
 dnf install git -y 
@@ -28,6 +27,5 @@ then
     echo "git installation failed"
     exit 1
 else 
-    echo "git Installation success"    
-
+    echo "git Installation success"
 fi
