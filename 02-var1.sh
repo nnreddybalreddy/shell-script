@@ -1,11 +1,11 @@
 #!/bin/bash
 
-echo "all::$@"
-echo  "name:::$0"
-echo "no of:::$#"
+NUM1=10
 
-echo "$PWD,   $USER,  $HOME,$HOSTNAME"
-echo "$$"
-sleep 60 &
-echo "$!"
+if [ $NUM1 -ge 10 ]
+then
+    echo "Num ge 10"
+else 
+    echo "Num le 10"
+fi        
 
