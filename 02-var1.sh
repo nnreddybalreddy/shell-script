@@ -7,10 +7,10 @@ echo "Hello world"
 echo "$PERSON1:::$PERSON2"
 
 echo "Enter username:::"
-read USERNAME
+read -s USERNAME
 
 echo "Enter password::::"
-read PASSWORD
+read -s PASSWORD
 
 echo "$USERNAME,$PASSWORD"
 
