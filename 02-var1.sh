@@ -6,5 +6,6 @@ echo "no of:::$#"
 
 echo "$PWD,   $USER,  $HOME,$HOSTNAME"
 echo "$$"
+sleep 60$
 edho "$!"
 
