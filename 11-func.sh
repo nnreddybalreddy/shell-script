@@ -18,10 +18,7 @@ else
 fi    
 
 
-dnf install mysqld -y 
-
-
-
+dnf install mysql -y 
 VALIDATE $? "Installing MYSQL"
 
 dnf install git -y 
