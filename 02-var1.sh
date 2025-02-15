@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "ENTER USERNAME::"
-read $USERNAME
+read USERNAME
 
 echo "$USERNAME"
 
