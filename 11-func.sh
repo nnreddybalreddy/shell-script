@@ -8,6 +8,7 @@ then
     exit 1
 else
     echo "Super User"
+fi    
 
 
 dnf install mysqld -y 
@@ -18,4 +19,4 @@ then
     exit 1
 else 
     echo "mysql installation pass"
-fi        
+fi
