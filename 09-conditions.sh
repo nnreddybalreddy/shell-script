@@ -2,8 +2,8 @@
 
 NUM=10
 
-if ( NUM >= 10 ):
+if ( NUM >= 10 )
     echo "Number gr /eq 10"
 
-else:
+else
     echo "Number less than 10"
