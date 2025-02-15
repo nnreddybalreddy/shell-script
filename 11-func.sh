@@ -1,4 +1,8 @@
 #!/bin/bash
+USERID=$(id -u)
+TIMESTAMP=$(date +%F-%M-%S)
+SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
+LOGFILE=/tmp/$SCRIPT_NAME-$TIMESTAMP.log
 
 VALIDATE(){
     if [ $1 -ne 0 ]
@@ -12,7 +16,7 @@ VALIDATE(){
 }
 
 
-USERID=$(id -u)
+
 
 if [ $USERID -ne 0 ]
 then
