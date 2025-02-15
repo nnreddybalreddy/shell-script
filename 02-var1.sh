@@ -1,6 +1,5 @@
 #!/bin/bash
-echo "ENTER USERNAME::"
-read -s USERNAME
+movies = ("RRR" "YYY")
 
-echo "$USERNAME"
+echo "${movies[0]}"
 
