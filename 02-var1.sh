@@ -1,6 +1,6 @@
 #!/bin/bash
-movies=("RRR" "YYY" "RAGHHU")
+NO1=$1
+NO2=$2
 
-echo "${movies[0]}"
-echo "all: ${movies[$@]}"
+sum=$( ($No1) + ( $NO2 ) )
 
