@@ -11,12 +11,12 @@ else
     echo "You are super user"
 fi        
 
-dnf install mysql -y
+dnf install mysqlss -y
 if [ $? -ne 0 ]
 then
     echo "Installation of mysql is failed"
     exit 1
 else 
-    echo "Installation failed..."    
+    echo "Installation passed..."    
 
 echo "Proceeding..."
