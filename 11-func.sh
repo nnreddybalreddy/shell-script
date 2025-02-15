@@ -20,3 +20,13 @@ then
 else 
     echo "mysql installation pass"
 fi
+
+dnf install git -y 
+
+if [ $? -ne 0 ]
+then 
+    echo "git installation failed"
+    exit 1
+else 
+    echo "git installation pass"
+fi
