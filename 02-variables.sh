@@ -1,8 +1,4 @@
 #!/bin/bash
 
-Ramesh=$1
-Suresh=$2
-
-echo "Hello"
-
-echo "$1 is $2"
+echo "Ramesh:: Suresh how are you"
+echo "Suresh:: Ramesh i m good"
