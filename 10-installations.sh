@@ -11,3 +11,5 @@ else
 fi        
 
 dnf install mysql -y
+
+echo "Proceeding..."
