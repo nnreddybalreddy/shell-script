@@ -14,7 +14,7 @@
 
 NUM1=10
 
-if [ $NUM -ge 10 ]
+if [ $NUM1 -ge 10 ]
 then
     echo "No ge 10"
 else
