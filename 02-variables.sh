@@ -1,7 +1,7 @@
 #!/bin/bash
 
-$1="Ramesh"
-$2="Suresh"
+Ramesh=$1
+Suresh=$2
 
 echo "Hello"
 
