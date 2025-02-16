@@ -30,8 +30,8 @@ fi
 
 
 
-dnf install mysql -y &>>LOGFILE
+dnf install mysql -y &>>$LOGFILE
 VALIDATE $? "mysql instalation"
 
-dnf install git -y >>&LOGFILE
+dnf install git -y &>>$LOGFILE
 VALIDATE $? "git installation"
