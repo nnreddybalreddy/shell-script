@@ -69,7 +69,7 @@ for i in $@
 do
     echo "installation of $i"
     dnf list installed $i &>>$LOGFILE
-    if [ $? -ne 0 ]
+    if [ $? -eq 0 ]
     then 
         echo -e "$i $Y already installed...$N"
     else 
