@@ -19,4 +19,9 @@ else
     echo "Its a root user"    
 fi
 
-echo "all packages:$@"
+# echo "all packages:$@"
+
+for i in {$@}
+do
+    echo "$i"
+done    
