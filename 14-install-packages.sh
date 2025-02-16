@@ -21,7 +21,7 @@ fi
 
 # echo "all packages:$@"
 
-for i in {$@}
+for i in $@
 do
     echo "$i"
 done    
