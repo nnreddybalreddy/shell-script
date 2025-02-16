@@ -1,6 +1,6 @@
 #!/bin/bash
 TIMESTAMP=$(date +%F-%M-%H-%S)
-SCRIPT_NAME=$(echo $0 | cut -f "." -f1)
+SCRIPT_NAME=$( echo $0 | cut -d "." -f1)
 
 LOGFILE=/tmp/$TIMESTAMP-$SCRIPT_NAME.log
 R="\e[31m"
