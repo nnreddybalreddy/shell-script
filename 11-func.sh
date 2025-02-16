@@ -74,6 +74,7 @@ do
         echo -e "$i $Y already installed...$N"
     else 
         dnf install $i -y &>>$LOGFILE
+        VALIDATE $? "$i installation"
     fi
 
 done
