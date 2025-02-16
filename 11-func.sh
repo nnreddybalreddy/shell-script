@@ -68,10 +68,10 @@ fi
 for i in $@
 do
     echo "installation of $i"
-    dnf installed list $i 
+    dnf list installed $i 
     if [ $? -ne 0 ]
     then 
-        echo "$i $Y already installed...$N"
+        echo -e "$i $Y already installed...$N"
     else 
         dnf install $i -y &>>$LOGFILE
     fi
