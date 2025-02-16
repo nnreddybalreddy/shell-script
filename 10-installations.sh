@@ -68,7 +68,7 @@ do
     dnf list installed $i &>>$LOGFILE
     if [ $? -eq 0 ]
     then 
-        echo-e "$i already installed"
+        echo -e "$i already installed"
     else 
         dnf install $i -y &>>$LOGFILE
         VALIDATE $? "$i installation"  
