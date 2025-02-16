@@ -33,13 +33,18 @@
 
 # VALIDATE $? "git installation"
 
+TIMESTAMP=$(date +%F-+%M-+%H-%S)
+SCRIPT_NAME=$(echo $? | cut -d "." -f1)
+
+LOGFILE=/tmp/$SCRIPT_NAME-$TIMESTAMP.log
+
 VALIDATE(){
     if [ $1 -ne 0 ]
     then 
-        echo "$2 installation failed...."
+        echo "$2  failed...."
         exit 1
     else
-        echo "$2 instsallation pass..."    
+        echo "$2  pass..."    
     fi
 }
 
@@ -53,11 +58,11 @@ else
     echo "You are super"
 fi 
 
-dnf install mysql -y 
+dnf install mysql -y &>> $LOGFILE
 
 VALIDATE $? "Mysql installation"
 
-dnf install git -y
+dnf install git -y &>> $LOGFILE
 VALIDATE $? "git installation"
 
        
