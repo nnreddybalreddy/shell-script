@@ -5,15 +5,16 @@ SCRIPT_NAME=$( echo $0 | cut -d "." -f1)
 LOGFILE=/tmp/$TIMESTAMP-$SCRIPT_NAME.log
 R="\e[31m"
 G="\e[32m"
+Y="\e[33m"
 N="\e[0m"
 
 VALIDATE(){
     if [ $1 -ne 0 ]
     then 
-        echo -e "$2... $R failure $N"
+        echo -e "   $2... $R failure $N"
         exit 1
     else 
-        echo -e "$2... $G pass $N"    
+        echo -e "    $2... $G pass $N"    
 
     fi
 }
@@ -36,7 +37,7 @@ do
     dnf list installed $i &>>$LOGFILE
     if [ $? -eq 0 ]
     then
-        echo "$i already installed "
+        echo -e "$i $Y already installed $N"
     else 
         dnf install $i -y &>>$LOGFILE
         VALIDATE $? "Installation of $i"
