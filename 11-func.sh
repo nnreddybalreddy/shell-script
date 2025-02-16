@@ -33,7 +33,7 @@
 
 # VALIDATE $? "git installation"
 
-TIMESTAMP=$(date +%F-+%M-+%H-%S)
+TIMESTAMP=$(date +%F-%H-%M-%S)
 SCRIPT_NAME=$(echo $? | cut -d "." -f1)
 
 LOGFILE=/tmp/$SCRIPT_NAME-$TIMESTAMP.log
