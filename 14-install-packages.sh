@@ -38,7 +38,7 @@ do
     then
         echo "$i already installed "
     else 
-        dnf install $i -y &>>/tmp/$LOGFILE
+        dnf install $i -y &>>$LOGFILE
         VALIDATE $? "Installation of $i"
     fi 
 done    
