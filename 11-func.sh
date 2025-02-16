@@ -35,12 +35,15 @@
 
 R="\e[31m"
 G="\e[32m"
+Y="\e[33m"
 N="\e[0m"
 
 TIMESTAMP=$(date +%F-%H-%M-%S)
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
 
 LOGFILE=/tmp/$SCRIPT_NAME-$TIMESTAMP.log
+
+
 
 VALIDATE(){
     if [ $1 -ne 0 ]
@@ -62,12 +65,20 @@ else
     echo "You are super"
 fi 
 
-dnf install mysqllll -y &>> $LOGFILE
+for i in $@
+do
+    echo "installation of $i"
+    dnf installed list $i 
+    if [ $? -ne 0 ]
+    then 
+        echo "$i $Y already installed...$N"
+    else 
+        dnf install $i -y &>>$LOGFILE
+    fi
 
-VALIDATE $? "Mysql installation"
+done
 
-dnf install git -y &>> $LOGFILE
-VALIDATE $? "git installation"
+
 
        
 
