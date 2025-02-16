@@ -62,7 +62,7 @@ else
     echo "You are super"
 fi 
 
-dnf install mysql -y &>> $LOGFILE
+dnf install mysqllll -y &>> $LOGFILE
 
 VALIDATE $? "Mysql installation"
 
