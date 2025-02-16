@@ -62,8 +62,19 @@ else
     echo "You are super bro"
 fi
 
+for i in $@
+do 
+    echo "instllation of $i started"
+    dnf list installed $i &>>$LOGFILE
+    if [ $? -eq 0 ]
+    then 
+        echo-e "$i already installed"
+    else 
+        dnf install $i -y &>>$LOGFILE
+        VALIDATE $? "$i installation"  
+
+    fi
 
 
 
-dnf install mysql -y &>>$LOGFILE
-VALIDATE $? "Mysql installation"
+done 
