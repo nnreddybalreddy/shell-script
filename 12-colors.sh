@@ -1,5 +1,5 @@
 #!/bin/bash
-TIMESTAMP$(date +%F-%M-%H-%S)
+TIMESTAMP=$(date +%F-%M-%H-%S)
 SCRIPT_NAME=$(echo $0 | cut -f "." -f1)
 
 LOGFILE=/tmp/$TIMESTAMP-$SCRIPT_NAME.log
@@ -11,10 +11,10 @@ N="\e[0m"
 VALIDATE(){
     if [ $1 -ne 0 ]
     then 
-        echo "$2... $R failure $N"
+        echo -e "$2... $R failure $N"
         exit 1
     else 
-        echo "$2... $G pass $N"    
+        echo -e "$2... $G pass $N"    
 
     fi
 }
