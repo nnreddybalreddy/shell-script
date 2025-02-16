@@ -19,4 +19,4 @@ else
     echo "Its a root user"    
 fi
 
-echo "all packages:$#"
+echo "all packages:$@"
