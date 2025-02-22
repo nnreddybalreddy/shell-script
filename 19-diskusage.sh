@@ -5,11 +5,11 @@ THRESHOLD=6
 
 while IFS=read -r line
 do
-    USAGE=$(echo $DISK_USAGE | awk -F " " '{print $6F}' | cut -d "%" -f1)
-    FOLDER=$(echo $DISK_USAGE | awk -F " " '{print $NF}')
-    if [ $DISK_USAGE -ge $THRESHOLD ]
+    USAGE=$(echo $line | awk -F " " '{print $6F}' | cut -d "%" -f1)
+    FOLDER=$(echo $line | awk -F " " '{print $NF}')
+    if [ $line -ge $THRESHOLD ]
     then 
-        echo "$DISK_USAGE is greater than $THRSHOLD"
+        echo "$line is greater than $THRSHOLD"
     fi 
 
 done<<<$DISK_USAGE
