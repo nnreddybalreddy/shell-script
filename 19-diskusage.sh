@@ -12,7 +12,7 @@ do
         echo "$line is greater than $THRSHOLD"
     fi 
 
-done<<<$DISK_USAGE
+done<<< $DISK_USAGE
 
 
 
