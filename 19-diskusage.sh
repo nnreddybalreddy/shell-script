@@ -15,7 +15,7 @@ do
 
 done<<< $DISK_USAGE
 
-echo "$MESSAGE\n"
+echo -e "Message: $MESSAGE"
 
 
 
