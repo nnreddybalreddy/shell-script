@@ -13,6 +13,6 @@ echo "current: $COURSE"
 echo "PID of current script:$$"
 
 
-source 16-other.sh 
+source ./16-other.sh 
 
 echo "Course after other script:$COURSE"
