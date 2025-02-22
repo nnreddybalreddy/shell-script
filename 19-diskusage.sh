@@ -7,7 +7,10 @@ while IFS= read -r line
 do
     USAGE=$(echo $line | awk -F " " '{print $6F}' | cut -d "%" -f1)
     FOLDER=$(echo $line | awk -F " " '{print $NF}')
-    echo $line
+    if [ $DISK_USAGE -ge $USAGE ]
+    then 
+        echo "usage"
+    fi    
 
 done<<< $DISK_USAGE
 
